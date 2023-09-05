@@ -1,0 +1,49 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 ">
+                <mat-card class="mt20 ">
+                    <h1 class="mt20 ml10">Read the instructions Carefully</h1>
+                    <mat-card-header>
+                        <mat-card-title><u>{{quiz.title}} </u> </mat-card-title>
+                        <mat-card-subtitle>{{quiz.description}}</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-divider></mat-divider>
+                    <mat-card-content>
+                    <h2 class="mt10 ml10">Important Instructions</h2>
+                    <ul>
+                        <li>This Quiz is Only for Practice Purpose</li>
+                        <li>Time of this quiz is <b>{{quiz.noOfQuestions * 2}} minutes</b></li>
+                        <li>You have to submit quiz within time</li>
+                        <li>There are <b>{{quiz.noOfQuestions}} Questions</b> in this Quiz</li>
+                        <li>Each Question Carry <b>{{quiz.maxMarks/quiz.noOfQuestions}} Marks. No negative Marking</b></li>
+                        <li>Questions Are <b> Multiple Choice Quetions (MCQ)</b> Type</li>
+                    </ul>
+                    <mat-divider></mat-divider>
+                    <h2 class="mt10 ml10" >Attempting Quiz</h2>
+                    <ul>
+                        <li>Read Instructions: Carefully read the instructions provided for the quiz. Understand the format, time limit, and any specific rules mentioned.</li>
+                           <li>Prepare Environment: Choose a quiet and comfortable place to take the quiz. Make sure you have a stable internet connection and all necessary materials like pen, paper, or calculator, if allowed.</li>
+                            
+                           <li> Time Management: Take note of the time limit for the quiz. Pace yourself to ensure you have enough time to answer all the questions. If there's a clock visible, keep an eye on it to manage your time effectively.</li>
+                            
+                           <li> One Question at a Time: Focus on one question at a time. Read the question carefully and understand what is being asked before attempting an answer.</li>
+                            
+                           <li> Answer Selection: If it's a multiple-choice quiz, go through all the provided options before selecting your answer. If it's an open-ended quiz, structure your response clearly and concisely.</li>
+                    </ul>
+                    </mat-card-content>
+                    <mat-divider></mat-divider>
+                    <mat-card-actions>
+                        <div class="container mt10">
+                            <div class="row">
+                                <button class=" text-center" 
+                                (click)="startQuiz()"
+                                mat-raised-button color="primary">Start Quiz</button>
+                            </div>
+                        </div>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

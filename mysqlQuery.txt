@@ -1,0 +1,96 @@
+1)create user 'examportaluser'@'%' identified by 'ExamPassword';
+which create new user and password
+
+2)grant all on exam.* to 'examportaluser'@'%';
+gives all permission of exam database to examportaluser
+
+{
+    "title": "Python Quizes",
+    "description": "This Quiz contains quetions of basics Python",
+    "maxMarks": "100",
+    "noOfQuestions": "10",
+    "active": false,
+    "category": {
+        "cid": 25
+    }
+}
+{
+    "content":"What is Java Programming?",
+    "image":"java.png",
+    "option1":"OOps",
+    "option2":"Platform Independent",
+    "option3":"Dynamic",
+    "option4":"ALL",
+    "answer":"ALL",
+    "quiz":{
+        "qId":29
+    }
+}
+
+    this._quiz.deleteQuiz(qId).subscribe(
+      (data:any)=>{
+        this.quizzes = this.quizzes.filter(
+          (quiz)=> quiz.qId != qId
+          );
+        Swal.fire('Success','Quiz Deleted Successfully!!','success');
+      },
+      (error)=>{
+        Swal.fire('Error!','Error in deleting Quiz!!','error');
+
+      }
+
+    );
+
+
+/////////////////////////////////////////////////
+
+examuser
+examportalsadikatt@222324
+chmod 777 /home/ubuntu/project/examportala.jar
+
+
+[Unit]
+Description=A Spring Boot Application for examportala
+After=syslog.target
+
+[Service]
+User=ubuntu
+ExecStart=/home/ubuntu/project/examportala.jar
+SuccessExitStatus=143
+
+[Install]
+WantedBy=multi-user.target
+
+/etc/systemd/system examportal.service
+
+systemctl enable examportal
+systemctl start examportal
+systemctl stop examportal
+systemctl restart examportal
+systemctl status examportal
+
+systemctl enable nginx
+systemctl start nginx
+systemctl stop nginx
+systemctl restart nginx
+systemctl status nginx
+
+/etc/nginx/conf.d/
+
+www.com.conf
+
+server{
+ listen 0.0.0.0:80;
+ root /home/ubuntu/project/examfront;
+ server_name 54.86.145.252
+ location / {
+  try_files $uri $uri/ /index.html;
+ }
+}
+
+
+
+
+NgxUiLoaderService
+
+cubic-bezier(0, 0, 0.2, 1)	

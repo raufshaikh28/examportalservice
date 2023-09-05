@@ -1,0 +1,8 @@
+package com.exam.examserver.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MySecurityConfig {
+
+}

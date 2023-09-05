@@ -1,0 +1,9 @@
+package com.exam.examserver.service;
+
+import com.exam.examserver.model.exam.Category;
+
+public interface CategoryService {
+	public Category addCategory(Category category);
+	
+	public Category updateCategory(Category category);
+}

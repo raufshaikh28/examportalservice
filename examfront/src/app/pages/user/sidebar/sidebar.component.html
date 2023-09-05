@@ -1,0 +1,16 @@
+<div class="w100">
+    <mat-card>
+        <mat-action-list >
+            <div mat-subheader>Menu</div>
+            <button  class="mr20 floatl" [routerLink]="'/user-dashboard/0'" mat-list-item><mat-icon class="floatl mr10" mat-icon-list>home</mat-icon> Home</button>
+            <button 
+            [routerLink]="'/user-dashboard/' + c.cid"
+            mat-list-item *ngFor="let c of categories"
+            >   
+                <mat-icon class="floatl mr10"  mat-icon-list>quiz</mat-icon> 
+                {{c.title}}
+            </button>
+                    
+            </mat-action-list>
+    </mat-card>
+    </div>

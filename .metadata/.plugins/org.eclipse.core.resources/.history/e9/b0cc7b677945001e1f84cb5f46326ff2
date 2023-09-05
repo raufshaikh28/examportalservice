@@ -1,0 +1,28 @@
+package com.exam.examserver.model.exam;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="category")
+public class Category {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long cid;
+	
+	private String title;
+	
+	private String description;
+
+	public Category() {
+	}
+	public Category(long cid, String title, String description) {
+		this.title = title;
+		this.description = description;
+	}
+	
+	
+}

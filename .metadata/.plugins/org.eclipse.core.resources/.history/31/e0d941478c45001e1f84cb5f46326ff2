@@ -1,0 +1,7 @@
+package com.exam.examserver.service.impl;
+
+import com.exam.examserver.service.CategoryService;
+
+public class CategoryServiceImpl implements CategoryService{
+
+}
